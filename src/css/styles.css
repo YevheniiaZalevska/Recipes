@@ -1,18 +1,53 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
+
 @import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
+@import url('./reset.css');
+@import url('./modal.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.recipe-list {
+  /* width: 1440px; */
+
+  margin: 24px auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  height: auto;
+}
+
+.recipe-card {
+  width: 360px;
+  /* width: calc((100% - 3 * 32px) / 4); */
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 2px rgba(135, 55, 165, 0.64);
+  transition: box-shadow, scale 300ms ease-in-out;
+}
+
+.recipe-card:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 6px 6px rgba(135, 55, 165, 0.64);
+}
